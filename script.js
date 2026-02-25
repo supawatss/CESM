@@ -19,9 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            nav.style.padding = '15px 0';
+            nav.style.padding = '0.8rem 3rem';
+            nav.style.background = 'rgba(255, 255, 255, 0.95)';
         } else {
-            nav.style.padding = '25px 0';
+            nav.style.padding = '1rem 3rem';
+            nav.style.background = 'rgba(255, 255, 255, 0.85)';
         }
     });
 });
