@@ -1,0 +1,358 @@
+:root {
+    --primary: #0B4D3C;
+    /* Deeper friendly green */
+    --accent: #E8B931;
+    /* Vibrant gold */
+    --secondary: #2A9D8F;
+    --warm-bg: #FCF9F2;
+    --white: #FFFFFF;
+    --text-main: #2D3436;
+    --text-muted: #636E72;
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+    /* SDG Colors */
+    --sdg-4: #C5192D;
+    /* Quality Education */
+    --sdg-7: #FFB310;
+    /* Clean Energy */
+    --sdg-8: #A21942;
+    /* Economic Growth */
+    --sdg-9: #FD6925;
+    /* Innovation */
+    --sdg-12: #BF8B2E;
+    /* Production */
+    --sdg-13: #3F7E44;
+    /* Climate Action */
+    --sdg-17: #19486A;
+    /* Partnerships */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Anuphan', sans-serif;
+    color: var(--text-main);
+    line-height: 1.7;
+    background-color: var(--warm-bg);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Typography Refinement */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+/* Elegant Thai Header Style */
+.th-elegant {
+    font-family: 'Maitree', serif;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.bilingual-tag {
+    display: inline-flex;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+/* Friendly Navigation */
+nav {
+    position: sticky;
+    top: 20px;
+    margin: 0 20px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Outfit';
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Friendly Hero */
+.hero {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 55%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 650px;
+    height: 480px;
+    z-index: 0;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.hero-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0.9);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* SDG Showcase Section */
+.sdg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sdg-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-top: 6px solid var(--primary);
+}
+
+.sdg-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.sdg-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Individual SDG Colors */
+.sdg-quality-edu {
+    border-top-color: var(--sdg-4);
+}
+
+.sdg-innovation {
+    border-top-color: var(--sdg-9);
+}
+
+.sdg-climate {
+    border-top-color: var(--sdg-13);
+}
+
+.sdg-partnership {
+    border-top-color: var(--sdg-17);
+}
+
+/* Core Expertise Blocks (V4.3) */
+.expertise-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    margin-top: 4rem;
+}
+
+.pillar-block {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    min-height: 450px;
+}
+
+.pillar-block.alt {
+    flex-direction: row-reverse;
+}
+
+.pillar-content {
+    flex: 1;
+    padding: 5rem;
+}
+
+.pillar-img {
+    flex: 1.2;
+    height: 450px;
+    overflow: hidden;
+}
+
+.pillar-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.pillar-block:hover .pillar-img img {
+    transform: scale(1.08);
+}
+
+/* Bilingual Layout Utilities */
+.bilingual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/* Friendly Footer */
+footer {
+    padding: 80px 0 40px;
+    background: var(--white);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 60px 60px 0 0;
+    margin-top: 100px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.contact-circle {
+    width: 45px;
+    height: 45px;
+    background: var(--warm-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 968px) {
+
+    .hero-grid,
+    .footer-grid,
+    .bilingual-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pillar-block,
+    .pillar-block.alt {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .pillar-img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .pillar-content {
+        padding: 3rem 2rem;
+    }
+
+    .hero-image-container {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+}
